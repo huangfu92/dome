@@ -55,14 +55,14 @@ export default {
  },
  methods:{
  	modify(id){
- 		
+ 		var _this = this;
  		this.$parent.list.forEach(function(k,v){
- 			console.log(this.names )
- 			console.log(this.age )
+ 			console.log(_this.name)
+ 			//console.log(_this.age )
  			if(k.id==id){
- 				 // this.names = k.name
- 				 // this.ages = k.age
- 				 // this.ishide = true
+ 				  _this.names = k.name
+ 				  _this.ages = k.age
+ 				  _this.ishide = true
  			}
  		})
  	}
