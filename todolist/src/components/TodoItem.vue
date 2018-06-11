@@ -1,6 +1,6 @@
 <template>
   <ul>
-  	<li @click="handleClick">{{content}}</li>
+  	<li @click="handleClick">{{content.name}}</li>
 
   </ul>
 </template>

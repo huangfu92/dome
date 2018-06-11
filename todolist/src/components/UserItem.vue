@@ -1,17 +1,24 @@
 <template>
-  <div>这是用户利益</div>
+  <div>
+  	
+	<span>这是用户利益</span>
+	<span>{{this.$parent.list}}</span>
+  </div>
 </template>
 
 <script>
 
 export default {
- props:["content","index"],
-  methods:{
-    handleClick(){
-     this.$emit("delete",this.index)
-    }
+ computed:{
+  list(){
+    let a = this.$parent.list
+    return a
   }
-
+ },
+ created(){
+  console.log(this.$parent.list)
+  // alert(this.$parent.list)
+ },
 }
 </script>
 <!---scoped 修饰符样式作用于-->
