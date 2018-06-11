@@ -27,7 +27,7 @@
 	<div class="modify" v-if="ishide">
 		<input type="text" v-model="names"/>
 		<input type="text" v-model="ages"/>
-		<button>提交</button>
+		<button @click = "modifySubmit(id)">提交</button>
 	</div>
   </div>
 </template>
@@ -46,7 +46,8 @@ export default {
 	return {
 		ishide:false,
 		names:"111111",
-		ages:"22222"
+		ages:"22222",
+		id:""
 	}
  },
  created(){
@@ -57,12 +58,23 @@ export default {
  	modify(id){
  		var _this = this;
  		this.$parent.list.forEach(function(k,v){
- 			console.log(_this.name)
- 			//console.log(_this.age )
+ 			
  			if(k.id==id){
  				  _this.names = k.name
  				  _this.ages = k.age
+ 				  _this.id = k.id
  				  _this.ishide = true
+ 			}
+ 		})
+ 	},
+ 	modifySubmit(id){
+ 		var _this = this;
+ 		this.$parent.list.forEach(function(k,v){
+ 			if(k.id==id){
+ 				  k.name = _this.names 
+ 				  k.age = _this.ages 
+ 				  k.id = _this.id
+ 				  _this.ishide = false
  			}
  		})
  	}
