@@ -1,7 +1,7 @@
 <template>
   <div>
    <ul class="ul">
-     <router-link to="/UserList" @click="goBack">用户列表</router-link>
+     <router-link to="/UserList" @click="goBack">用户信息</router-link>
      <router-link to="/UserItem">用户利益</router-link>
    </ul>
    <router-view></router-view>

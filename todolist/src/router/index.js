@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Todoitem from '@/components/Todoitem'
+import TodoList from '@/components/TodoList'
 import UserList from '@/components/UserList'
 import UserItem from '@/components/UserItem'
 
@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: '',
-      component: Todoitem
+      component: TodoList
     },
     {
       path: '/UserList',

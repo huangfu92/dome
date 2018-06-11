@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import TodoItem from "./components/TodoItem"
+import TodoItem from "./TodoItem"
 export default {
   components:{
   "todo-item" : TodoItem
@@ -33,12 +33,12 @@ export default {
  },
  
 methods:{
-  habdleSubmit(){
+  habdleSubmit () {
    this.list.push(this.inputValue)
    this.inputValue = ""
   },
-  habdleDele(index){
-    console.log(index)
+  habdleDele (index) {
+    
     this.list.splice(index,1)
   }
 }
