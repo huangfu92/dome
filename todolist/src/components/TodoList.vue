@@ -11,7 +11,7 @@
         :key = "index"
         :content="item" 
         :index = "index"
-        :delete = "habdleDele"
+        @delete = "habdleDele"
       >
         
       </todo-item> 
@@ -54,6 +54,7 @@ methods:{
    this.$emit("Add",this.list)
   },
   habdleDele (index) {
+    
     this.list.splice(index,1)
   }
 }

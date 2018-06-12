@@ -18,7 +18,7 @@
 	  		<td>{{list.age}}</td>
 	  		<td>
 		  		<span @click="modify(list.id)" >编辑</span>
-		  		<span>删除</span>
+		  		<span @click="modifyDele(list.id)">删除</span>
 	  		</td>
 	  	</tr>
 	  </tbody>	
@@ -45,8 +45,8 @@ export default {
  data(){
 	return {
 		ishide:false,
-		names:"111111",
-		ages:"22222",
+		names:"",
+		ages:"",
 		id:""
 	}
  },
@@ -75,6 +75,15 @@ export default {
  				  k.age = _this.ages 
  				  k.id = _this.id
  				  _this.ishide = false
+ 			}
+ 		})
+ 	},
+ 	modifyDele(id){
+ 		var _this = this.$parent.list;
+ 		this.$parent.list.forEach(function(k,v){
+ 			
+ 			if(k.id==id){
+ 				 _this.splice(v,1)
  			}
  		})
  	}
