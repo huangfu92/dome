@@ -22,7 +22,6 @@ export default {
 methods:{
   Add_obj (data) {
    this.list = data
-   //alert(this.list)
   }
 }
  
